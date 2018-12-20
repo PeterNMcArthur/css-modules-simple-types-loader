@@ -1,0 +1,15 @@
+{
+  "name": "css-modules-simple-types-loader",
+  "module": "css-modules-simple-types-loader",
+  "author": {
+    "name": "Peter McArthur",
+    "email": "peter.n.mcarthur@googlemail.com"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Webpack loader to generate simple types for css modules classes",
+  "license": "MIT",
+  "main": "index.js",
+  "version": "1.0.0"
+}
+
