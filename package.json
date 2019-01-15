@@ -1,6 +1,11 @@
 {
   "name": "css-modules-simple-types-loader",
   "module": "css-modules-simple-types-loader",
+  "homepage": "https://github.com/PeterNMcArthur/css-modules-simple-types-loader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeterNMcArthur/css-modules-simple-types-loader.git"
+  },
   "author": {
     "name": "Peter McArthur",
     "email": "peter.n.mcarthur@googlemail.com"

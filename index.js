@@ -1,13 +1,12 @@
-const {basename} = require('path');
-const {readFile, writeFile} = require('fs');
+const {basename} = require("path");
+const {readFile, writeFile} = require("fs");
+const keyWords = require("./reserved_words");
 
-function isValidTypeScriptVariable(className) {
-	return /^[^-]+$/ig.test(className)
-}
+const isValidTypeScriptVariable = (className) => /^[^-]+$/ig.test(className);
 
-function makeExportStatement(className) {
-	return `export const ${className}: string;`
-}
+const exportString = (className) => `export const ${className}: string;`;
+
+const makeExportStatement = (classNameList, className) => keyWords.includes(className) ? classNameList : classNameList.concat([exportString(className)]);
 
 module.exports = function loader(webpackSource) {
 	this.cacheable();
@@ -36,7 +35,7 @@ module.exports = function loader(webpackSource) {
 		if (locals.length) {
 			const output = locals
 				.filter(isValidTypeScriptVariable)
-				.map(makeExportStatement)
+				.reduce(makeExportStatement, [])
 				.join('\n');
 
 			const filename = `${this.resource}.d.ts`;
