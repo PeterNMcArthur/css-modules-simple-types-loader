@@ -1,6 +1,6 @@
 # css-modules-simple-types-loader
 
-Webpack loader to generate simple types for css modules classes
+Webpack loader to generate simple types for css modules classes. It will remove any reserved typescript and javascript keywords used as css class names. 
 
 ### Install
 
@@ -10,7 +10,7 @@ npm i -D css-modules-simple-types-loader
 
 ### Usage
 
-Only valid typescript variable names will be generated in the types file, as such it is recommended that you use css-loader modules true  option to convert kebab case css class names to camelCase.
+Only valid typescript variable names will be generated in the types file, as such it is recommended that you use css-loader modules true option to convert kebab case css class names to camelCase.
 
 ```
 {
